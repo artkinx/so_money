@@ -3,16 +3,22 @@ This package provides classes required to manipulate monetary values.
 The main class `Money` can be used very intuitively to carry out all sort of arithmetic operations and comparisons
 on monetary values.
 
-It also contains a `Currency` class to represent currencies (including metals and cryptos) and an `ExchangeRate` class 
+The package also contains a `Currency` class to represent currencies (including metals and cryptos) and an `ExchangeRate` class 
 to represent cross-currency exchange rates.
 
 ## Getting started
 
-You may import this library to your dart application with the following command (in your project folder):
+You may import this library to your dart application with the following commands (in your project folder):
 
 ```shell
 dart pub add so_money
 dart pub get
+```
+
+In flutter applications, you could use the following commands:
+```shell
+flutter pub add so_money
+flutter pub get
 ```
 
 ## Usage
