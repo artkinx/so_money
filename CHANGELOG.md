@@ -3,3 +3,6 @@
 
 ## 0.0.2
 - README updated.
+
+## 0.0.3
+- Concept of local currency introduced. `Currency.local`

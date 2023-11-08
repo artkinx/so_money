@@ -18,6 +18,8 @@ class Currency {
   static final NumberFormat _formatter2 = NumberFormat('###,##0.00');
   static final NumberFormat _formatter3 = NumberFormat('###,##0.000');
 
+  static Currency? _local;
+
   /// Currency code
   final String code;
 
@@ -26,6 +28,9 @@ class Currency {
       throw 'Duplicate currency: $code';
     }
     _cache[code] = this;
+    if (_local == null && this is! CryptoCurrency && this is! MetalCurrency) {
+      _local = this;
+    }
   }
 
   /// Number of decimals of this currency.
@@ -35,6 +40,9 @@ class Currency {
   String get symbol {
     return _symbols[code] ?? code;
   }
+
+  // Local currency. This will be automatically set as the first currency created/accessed.
+  static Currency get local => _local ?? get('INR');
 
   /// Number formatter to be used for formatting this currency.
   NumberFormat get formatter {
@@ -67,11 +75,17 @@ class Currency {
       _SpecialCurrency('OMR', 3);
       _SpecialCurrency('BHD', 3);
       CryptoCurrency('BTC', 8, '₿');
+      _local = null;
     }
     Currency? currency;
     code = code.trim().toUpperCase();
     currency = _cache[code];
     if (currency != null) {
+      if (_local == null &&
+          currency is! CryptoCurrency &&
+          currency is! MetalCurrency) {
+        _local = currency;
+      }
       return currency;
     }
     String c =
@@ -101,6 +115,9 @@ class Currency {
       _formatters[currency.code] = formatter;
     }
   }
+
+  @override
+  String toString() => code;
 
   int _normalize(num value) {
     int d = decimals;

@@ -43,6 +43,7 @@ void main() {
   ExchangeRate(usd, aed, 3.675);
   print(m1.to(usd)); // $ 100.00
   print(m1.to(aed)); // AED 367.50
+  print(m1.to(usd).to(aed)); // AED 367.50
   print(Money(5.45, 'BTC')); // ₿ 5.45000000
 }
 ```
