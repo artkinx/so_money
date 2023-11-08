@@ -1,7 +1,7 @@
 name: so_money
-description: A starting point for Dart libraries or applications.
+description: This package provides classes required to manipulate monetary values including arithmetic operations and comparisons.
 version: 0.0.1
-# repository: https://github.com/my_org/my_repo
+repository: https://github.com/syampillai/so_money
 
 environment:
   sdk: ^3.1.5

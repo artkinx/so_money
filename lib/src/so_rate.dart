@@ -2,7 +2,6 @@ part of 'so_money_base.dart';
 
 /// Representation of exchange rate between currencies.
 class ExchangeRate {
-
   static final Map<String, ExchangeRate> _cache = {};
   final Currency from, to;
   final num multiplier;
@@ -19,11 +18,11 @@ class ExchangeRate {
   /// of one currency to another.
   static num rate(Currency from, Currency to) {
     ExchangeRate? r = _cache[from.code + to.code];
-    if(r != null) {
+    if (r != null) {
       return r.multiplier;
     }
     r = _cache[to.code + from.code];
-    if(r != null) {
+    if (r != null) {
       return 1 / r.multiplier;
     }
     throw 'Exchange rate not found for ${from.code} to ${to.code}';
