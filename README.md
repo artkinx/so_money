@@ -43,4 +43,4 @@ void main() {
 
 ## Additional information
 
-Please report issues related to this package at the [github repository](https://github.com/syampillai/so_money).
+Please report issues related to this package at the [GitHub repository](https://github.com/syampillai/so_money/issues).
