@@ -24,4 +24,9 @@ void main() {
   print(Money(5.45, 'BTC')); // ₿ 5.45000000
   ExchangeRate(aed, Currency.local, 22.2);
   print(m1.to(Currency.local));
+
+  Money price = Money(12.54, 'USD');
+  int quantity = 25;
+  Money total = price * quantity;
+  print('Total: $total');
 }

@@ -1,6 +1,6 @@
 name: so_money
 description: This package provides classes required to manipulate monetary values including arithmetic operations and comparisons.
-version: 0.0.3
+version: 0.0.4
 repository: https://github.com/syampillai/so_money
 
 environment:

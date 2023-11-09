@@ -101,6 +101,7 @@ class Currency {
   /// to change the value return by the symbol property.
   static void setSymbol(Currency currency, String symbol) {
     if (symbol.isNotEmpty) {
+      _symbols.removeWhere((key, value) => value == symbol);
       _symbols[currency.code] = symbol;
     }
   }
