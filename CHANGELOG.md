@@ -9,3 +9,6 @@
 
 ## 0.0.4
 - Minor bug fixed in `Currency.setSymbol` method.
+
+## 0.0.5
+- Environment and dependencies updated to the latest available versions.
