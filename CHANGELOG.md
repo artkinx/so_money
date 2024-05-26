@@ -12,3 +12,6 @@
 
 ## 0.0.5
 - Environment and dependencies updated to the latest available versions.
+
+## 0.0.6
+- Environment and dependencies updated to the latest available versions.
