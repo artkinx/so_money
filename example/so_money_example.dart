@@ -1,8 +1,10 @@
 import 'package:so_money/so_money.dart';
 
 void main() {
-  Money m1 = Money(13453434522.34,
-      'INR'); // Since INR is used for the first time, it will become the local currency.
+  Money m1 = Money(
+    13453434522.34,
+    'INR',
+  ); // Since INR is used for the first time, it will become the local currency.
   print('Indian rupees test: $m1'); // ₹ 13,45,34,34,522.34
   m1 -= m1;
   print('Indian rupees test (should be zero): $m1'); // ₹ 0.00

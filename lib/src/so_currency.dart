@@ -88,8 +88,10 @@ class Currency {
       }
       return currency;
     }
-    String c =
-        _symbols.keys.firstWhere((k) => _symbols[k] == code, orElse: () => '');
+    String c = _symbols.keys.firstWhere(
+      (k) => _symbols[k] == code,
+      orElse: () => '',
+    );
     if (c.isNotEmpty) {
       return _cache[c]!;
     }

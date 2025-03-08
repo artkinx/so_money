@@ -12,7 +12,7 @@ class Money {
 
   // Construct an instance from the for the [value] in the given [currencyCode].
   Money(num value, String currencyCode)
-      : this.of(value, Currency.get(currencyCode));
+    : this.of(value, Currency.get(currencyCode));
 
   // Construct an instance from the for the [value] in the given [currency].
   Money.of(num value, this.currency) : _value = currency._normalize(value);
@@ -23,9 +23,10 @@ class Money {
   num get value => currency._denormalize(this);
 
   @override
-  bool operator ==(Object other) => other is Money
-      ? (other._value == _value && other.currency == currency)
-      : false;
+  bool operator ==(Object other) =>
+      other is Money
+          ? (other._value == _value && other.currency == currency)
+          : false;
 
   @override
   int get hashCode => Object.hash(_value, currency);
@@ -52,8 +53,9 @@ class Money {
       return this;
     }
     return Money._of(
-        (_value * ExchangeRate.rate(currency, another.currency)).round(),
-        currency);
+      (_value * ExchangeRate.rate(currency, another.currency)).round(),
+      currency,
+    );
   }
 
   /// Convert this instance into another currency if required by applying the respective
@@ -63,7 +65,9 @@ class Money {
       return this;
     }
     return Money._of(
-        (_value * ExchangeRate.rate(currency, another)).round(), another);
+      (_value * ExchangeRate.rate(currency, another)).round(),
+      another,
+    );
   }
 
   @override
@@ -72,10 +76,11 @@ class Money {
   }
 
   /// Format this monetary value for printing/displaying purposes.
-  String format(
-          {NumberFormat? formatter,
-          bool withSymbol = true,
-          withCode = false}) =>
+  String format({
+    NumberFormat? formatter,
+    bool withSymbol = true,
+    withCode = false,
+  }) =>
       (withCode
           ? '${currency.code} '
           : (withSymbol ? ('${currency.symbol} ') : '')) +

@@ -6,8 +6,10 @@ void main() {
     setUp(() {});
 
     test('Test Indian Rupees', () {
-      expect(Money(13453434522.34, 'INR').toString() == '₹ 13,45,34,34,522.34',
-          isTrue);
+      expect(
+        Money(13453434522.34, 'INR').toString() == '₹ 13,45,34,34,522.34',
+        isTrue,
+      );
     });
   });
 }
