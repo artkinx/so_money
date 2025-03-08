@@ -18,3 +18,6 @@
 
 ## 0.0.7
 - Environment and dependencies updated to the latest available versions.
+
+## 0.0.8
+- Environment and dependencies updated to the latest available versions.
