@@ -41,7 +41,7 @@ class Currency {
     return _symbols[code] ?? code;
   }
 
-  // Local currency. This will be automatically set as the first currency created/accessed.
+  // The [local] currency. This will be automatically set as the first currency created/accessed.
   static Currency get local => _local ?? get('INR');
 
   /// Number formatter to be used for formatting this currency.
