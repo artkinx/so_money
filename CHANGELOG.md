@@ -27,3 +27,6 @@
 
 ## 0.1.0
 - Environment and dependencies updated to the latest available versions.
+
+## 0.1.1
+- Environment and dependencies updated to the latest available versions.
