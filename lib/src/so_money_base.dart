@@ -23,10 +23,9 @@ class Money {
   num get value => currency._denormalize(this);
 
   @override
-  bool operator ==(Object other) =>
-      other is Money
-          ? (other._value == _value && other.currency == currency)
-          : false;
+  bool operator ==(Object other) => other is Money
+      ? (other._value == _value && other.currency == currency)
+      : false;
 
   @override
   int get hashCode => Object.hash(_value, currency);
