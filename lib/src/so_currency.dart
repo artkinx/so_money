@@ -9,6 +9,7 @@ class Currency {
     'EUR': '€',
     'OMR': 'OR',
     'BHD': 'BD',
+    'NGN': '₦',
   };
   static final Map<String, Currency> _cache = {};
   static final Map<String, NumberFormat> _formatters = {
