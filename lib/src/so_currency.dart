@@ -73,6 +73,7 @@ class Currency {
       Currency._of('USD');
       Currency._of('INR');
       Currency._of('EUR');
+      Currency._of('NGN');
       _SpecialCurrency('OMR', 3);
       _SpecialCurrency('BHD', 3);
       CryptoCurrency('BTC', 8, '₿');
